@@ -25,3 +25,10 @@ The trade-off: this library decodes only. It does not validate host syntax beyon
 
 - `decode_domain(domain: str) -> str` — the decoder.
 - `PunycodeDecodeError` — raised on malformed input, subclass of `ValueError`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
