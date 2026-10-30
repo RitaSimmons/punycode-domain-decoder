@@ -1,6 +1,6 @@
 [project]
 name = "punycode-domain-decoder"
-version = "0.1.2"
+version = "0.1.3"
 description = "Decodes internationalized domain names from ACE to Unicode, handling label boundaries and invalid input."
 requires-python = ">=3.10"
 dependencies = []
